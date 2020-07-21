@@ -1,65 +1,65 @@
-# helloworld README
+# TW Dev Server for VS Code
+[https://treinaweb.com.br](https://treinaweb.com.br)
 
-This is the README for your extension "helloworld". After writing up a brief description, we recommend including the following sections.
 
-## Features
+A powerful and lightweight server to be used for testing, local development and learning.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Use it as static file server and CRUD server. It has live reload and browser sync too!
 
-For example if there is an image subfolder under your extension project workspace:
+![Screen Preview](./img/features-preview.gif)
 
-\!\[feature X\]\(images/feature-x.png\)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Installation
 
-## Requirements
+Open VSCode and type `Ctrl+P`, type `ext install treinaweb.tw-dev-server`.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## Usage
 
-## Extension Settings
+![Status Bar](./img/vs-code-ext-status-bar.png)
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+Click on status bar item to Start/Stop the server. Go to [http://localhost:3002](http://localhost:3002) to view your server
 
-For example:
+### GUI
 
-This extension contributes the following settings:
+You can make requests on [https://treinaweb.github.io/tw-dev-server](https://treinaweb.github.io/tw-dev-server)
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+<img src="https://raw.githubusercontent.com/treinaweb/tw-dev-server/master/snapshot-gui.png" width="500">
 
-## Known Issues
+You can open this page on the `Right Click` menu. The options to Start/Stop the server are there too.
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+![Status Bar](./img/vs-code-ext-context-menu.png)
 
-## Release Notes
+### Extension Settings
 
-Users appreciate release notes as you update your extension.
+You can customize some options. Press `Ctrl + ,` to go to Settings.
 
-### 1.0.0
+![Settings](./img/vs-code-ext-settings.png)
 
-Initial release of ...
+| Name        | Description           |
+| ------------- |-------------|
+| Port     | port to use (defaults to 3002) | 
+| Temp     | data will be erased when stop the server (defaults to false) | 
+| Sync     | live reload and browser sync (defaults to true) |
+| Live     | live reload (no browser sync) (defaults to true) |
 
-### 1.0.1
 
-Fixed issue #.
+### CRUD Operations
 
-### 1.1.0
+CRUD operations are available under "/api/".
 
-Added features X, Y, and Z.
+| Method        | URL           | Description  |
+| ------------- |-------------| -----|
+|  GET    | http://localhost:3002/api/:project-name/:object-name | returns all :object-name from storage |
+|  GET    | http://localhost:3002/api/:project-name/:object-name?id=:id | returns the :object-name with the :id ID |
+|  POST    | http://localhost:3002/api/:project-name/:object-name | saves some data on :object-name |
+|  PUT     | http://localhost:3002/api/:project-name/:object-name?id=:id | updates the :object-name with the :id ID |
+|  DELETE    | http://localhost:3002/api/:project-name/:object-name?id=:id | erases the :object-name with the :id ID |
+|  DELETE    | http://localhost:3002/api/:project-name/:object-name?id=all | erases all :object-name from :project-name |
 
------------------------------------------------------------------------------------------------------------
+*URL Examples:*
 
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+- http://localhost:3002/api/my-school/book?id=123
+- http://localhost:3002/api/my-school/users/
+- http://localhost:3002/api/market/products/
+- http://localhost:3002/api/v1/market/products/
+- http://localhost:3002/api/some-prefix/another-prefix/market/products?id=12345

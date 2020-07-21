@@ -1,7 +1,7 @@
 {
 	"name": "tw-dev-server",
 	"displayName": "Tw Dev Server",
-	"description": "Leave Blank",
+	"description": "A powerful and lightweight server with browser sync to be used for testing, local development and learning.",
 	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.47.0"
