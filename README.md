@@ -13,6 +13,8 @@ Use it as static file server and CRUD server. It has live reload and browser syn
 
 Open VSCode and type `Ctrl+P`, type `ext install treinaweb.tw-dev-server`.
 
+Available as [NPM Package](https://www.npmjs.com/package/@treinaweb/tw-dev-server) too.
+
 ## Usage
 
 ![Status Bar](./img/vs-code-ext-status-bar.png)
