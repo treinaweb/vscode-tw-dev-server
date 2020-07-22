@@ -20,6 +20,7 @@
 		"onStartupFinished"
 	],
 	"main": "./out/extension.js",
+	"icon": "img/icon.png",
 	"contributes": {
 		"commands": [
 			{
@@ -109,6 +110,16 @@
 		"watch": "tsc -watch -p ./",
 		"pretest": "npm run compile && npm run lint",
 		"test": "node ./out/test/runTest.js"
+	},
+	"publisher": "treinaweb",
+	"homepage": "https://treinaweb.com.br/",
+	"author": {
+		"name": "Akira Hanashiro",
+		"url": "https://instagram.com/akirahanashiro"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/treinaweb/vscode-tw-dev-server.git"
 	},
 	"devDependencies": {
 		"@types/vscode": "^1.47.0",
