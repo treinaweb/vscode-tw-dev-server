@@ -2,7 +2,7 @@
 	"name": "tw-dev-server",
 	"displayName": "Tw Dev Server",
 	"description": "A powerful and lightweight server with browser sync to be used for testing, local development and learning.",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"engines": {
 		"vscode": "^1.47.0"
 	},
@@ -120,6 +120,10 @@
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/treinaweb/vscode-tw-dev-server.git"
+	},
+	"galleryBanner": {
+		"color": "#c6e9ff",
+		"theme": "light"
 	},
 	"devDependencies": {
 		"@types/vscode": "^1.47.0",
