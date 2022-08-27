@@ -8,6 +8,9 @@ Use it as static file server and CRUD server. It has live reload and browser syn
 
 ![Screen Preview](./img/features-preview.gif)
 
+## NPM Package
+This is the VS Code Version. If you want, You can check the [NPM Package](https://github.com/treinaweb/tw-dev-server) version.
+
 
 ## Installation
 
